@@ -1,0 +1,36 @@
+.container-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    background: linear-gradient(180deg, #1B1414 0%, #534e4e 100%);
+}
+.titulo-main{
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+ul{
+    display: flex;
+    padding: 12px;
+    margin: 0px 0px 48px 0px;
+    border-top: 1px solid #6A6363;
+    gap: 27px
+}
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.img-card{
+    width: 260px;
+    height: 260px;
+}
+li{
+    list-style: none;
+    width: 260px;
+}
+
