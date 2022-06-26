@@ -13,11 +13,15 @@ const Controls = ({
   setIconBtn,
   handleChangeMusic,
 }) => {
+  let intervalProgress = null;
   const progressRef = useRef(null);
   const startRef = useRef(null);
   const endRef = useRef(null);
   const handlePlayPause = () => {
-    setInterval(() => {
+    intervalProgress = setInterval(() => {
+      if (audioRef.current.paused) {
+        clearInterval(intervalProgress);
+      }
       const duration = (audioRef.current.duration / 60).toFixed(2);
       const progress = audioRef.current.currentTime / 60;
       const currentProgress = (progress.toFixed(2) * 100) / duration;
